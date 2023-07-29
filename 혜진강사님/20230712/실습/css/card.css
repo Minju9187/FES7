@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+.main-box{
+    margin : 0;
+    width : 288px;
+    height : 374px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.10);
+}
+.title-box{
+    margin-left : 16px;
+    margin-top : 16px;
+    width : 256px;
+    height : 40px;
+    display : flex;
+    align-items: center;
+    align-content: space-between;
+}
+
+.title-box img{
+    width : 40px;
+    height : 40px;
+    border-radius: 50%;
+}
+
+.title-text{
+    font-family : Pretendard;
+    display : flex;
+    flex-direction : column;
+}
+h2{
+    color : #29363D;
+    font-family : Pretendard;
+    font-size: 16px;
+    font-weight : 700;
+}
+.title-box p{
+    color : #5A6A72;
+    font-size : 12px;
+    font-weight: 400;
+}
+.main-img{
+    margin-top : 12px;
+    width : 288px;
+    height : 196px;
+}
+.main-text{
+    margin-left : 16px;
+    margin-top : 10px;
+    width : 256px;
+    height : 40px;
+    color : #5A6A72;
+    font-family: Pretendard;
+    font-size : 12px;
+    font-weight: 400;
+    line-height: 20px;
+
+    overflow: hidden;
+    display: -webket-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.left-btn p{
+    font-family: Pretendard;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration-line : underline;
+}

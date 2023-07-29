@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-pc{
+    font-family: Pretendard-Regular, "Times New Roman", Dotum, "돋움", sans-serif;
+}
+
+body{
+    color : red;
+}
+h1{
+    color : inherit;
+    font-family: 'Grandiflora One', serif;
+}
+/* currentColor : 부모의 컬러값을 상속받음 */
+strong{
+    border-bottom : 5px solid currentColor;
+}
+
+h2 {
+    color: #999;
+    font-family: 'Jua', sans-serif;
+}
+
+.parents{
+    width : 200px;
+    height : 200px;
+    background-color: aqua;
+}
+
+.child{
+    width : 50%;
+    height : 50%;
+    background-color: salmon;
+}

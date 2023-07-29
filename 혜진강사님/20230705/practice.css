@@ -1,0 +1,32 @@
+/* 태그 선택자 */
+body{
+    background-color: skyblue;
+}
+/* class 선택자 */
+.my{
+    color : slateblue;
+}
+/* id 선택자 */
+#title{
+    text-decoration: underline;
+}
+/* h2 태그 뒤에있는 p태그 모두 */
+h2 + p{
+    background-color: green;
+}
+/* my class 바로 뒤에있는 p태그 */
+.my + p{
+    color : aqua;
+}
+/* sec2 class 의 직계자식인 strong태그 */
+.sec2>strong{
+    background-color:yellow;
+}
+/* sec2 아래 모든 태그 */
+.sec2 *{
+    border : 2px solid red;
+}
+/* my class 바로 뒤에있는 p태그와 sec3클래스 아래 p태그 둘다 */
+.my + p, .sec3 p {
+    background-color: beige;
+}

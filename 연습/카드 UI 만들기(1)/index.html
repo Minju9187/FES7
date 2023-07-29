@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 UI 만들기</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        }
+
+        body,
+        h1,
+        p,
+        h2 {
+            margin: 0;
+        }
+
+        h1,
+        h2 {
+            font: inherit;
+        }
+
+        .card-ui {
+            width: 288px;
+            height: 348px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+            height: 196px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        h2 {
+            width: 200px;
+            height: 19px;
+            font-family: 'Pretendard', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: rgba(41, 54, 61, 1);
+
+            margin-top: 20px;
+            margin-left: 16px;
+        }
+
+        .content {
+            width: 256px;
+            height: 40px;
+            font-family: 'Pretendard';
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(90, 106, 114, 1);
+
+            margin-top: 16px;
+            margin-left: 16px;
+            line-height: 19.2px;
+
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        .read {
+            width: 70px;
+            height: 24px;
+            text-decoration: underline;
+
+            margin-left: 16px;
+            margin-top: 16px;
+
+            font-family: 'Pretendard';
+            font-weight: 700;
+            line-height: 16.8px;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="card-ui">
+        <img src="./images/unsplash_lB9ylP8e9Sg.png" alt="main-picture">
+        <div class="text-group">
+            <h2>그것을 피가 청춘을 것이다</h2>
+            <p class="content">청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히 청춘 것이다. 얼마나 반짝이는 소담스운 열락의 아름다우냐? 가지에 같지 청춘의 옷을 목숨을
+                피어나기 오직 군영과
+                칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리 평화스러운 있는가?</p>
+            <p class="read">Read</p>
+        </div>
+    </article>
+</body>
+
+</html>

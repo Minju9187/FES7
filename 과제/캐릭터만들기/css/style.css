@@ -1,0 +1,201 @@
+@keyframes bone1-fly{
+    0%{
+        transform : translate(0,0);
+    }
+    50%{
+        transform : translate(800px,800px) rotate(720deg);
+    }
+    100%{
+        transform : translate(800px,800px) rotate(720deg);
+    }
+}
+@keyframes bone2-fly{
+    0%{
+        transform : translate(0,0);
+    }
+    50%{
+        transform: translate(-1200px,300px) rotate(-1080deg);
+    }
+    100%{
+        transform: translate(-1200px,300px) rotate(-1080deg);
+    }
+}
+@keyframes cheek-pink{
+    0%{
+        background-color: #FFDBDB;
+    }
+    70%{
+        background-color: #FFDBDB;
+        scale : 1;
+    }
+    100%{
+        background-color: rgb(235, 109, 130);
+        scale : 1.5;
+    }
+}
+
+body{
+    background-color: skyblue;
+}
+.dog{
+    position : relative;
+    width : 50%;
+    height : 50%;
+    margin : auto;
+}
+.bone{
+    width : 800px;
+    position : absolute;
+    top : 670px;
+    left : 100px;
+    z-index: 10;
+}
+.body{
+    width : 800px;
+    position : absolute;
+    top : 350px;
+    left : 100px;
+    
+}
+.dog .ear-left,
+.dog .ear-right,
+.dog .face{
+    background-color: #d9d9d9;
+}
+.ear-left{
+    width : 160px;
+    height : 160px;
+    border-radius: 50%;
+    display : inline-block;
+    position: absolute;
+    top : 205px;
+    left : 260px;
+}
+.ear-right{
+    width : 200px;
+    height : 200px;
+    border-radius: 50%;
+    display : inline-block;
+    position : absolute;
+    top : 165px;
+    left : 550px;
+}
+.face{
+    width : 500px;
+    height:420px;
+    position : absolute;
+    border-radius: 50%;
+    top : 250px;
+    left : 250px;
+}
+
+.face .eye{
+    width : 50px;
+    height : 50px;
+    background-color: black;
+    border-radius: 50%;
+    top : 150px;
+}
+.face .eye.left{
+    position : absolute;
+    left : 150px;
+}
+.face .eye.right{
+    position : absolute;
+    left : 280px;
+}
+.face .nose{
+    width : 40px;
+    height : 40px;
+    position : absolute;
+    background-color: black;
+    border-radius: 50%;
+    top : 220px;
+    left : 215px;
+}
+.face .mouse{
+    width : 20px;
+    height : 60px;
+    background-color: black;
+    border-radius: 50%/10px;
+}
+.face .mouse.left{
+    position : absolute;
+    top : 235px;
+    left : 210px;
+    transform: rotate(30deg);
+}
+.face .mouse.right{
+    position: absolute;
+    top : 245px;
+    left : 235px;
+    transform : rotate(-20deg);
+}
+.face .cheek{
+    animation: linear cheek-pink 3s infinite;
+    width : 80px;
+    height : 45px;
+    display: inline-block;
+    background-color: #FFDBDB;
+    border-radius: 100%;
+}
+.face .cheek.left{
+    position: absolute;
+    top : 230px;
+    left : 80px;
+}
+.face .cheek.right{
+    position :absolute;
+    top : 230px;
+    left : 300px;
+}
+.plate{
+    width : 180px;
+    height : 100px;
+    display: inline-block;
+    position: absolute;
+    background-color: saddlebrown;
+    top : 720px;
+    left : 430px;
+    z-index: 20;
+    border-radius: 50%;
+    box-shadow: inset 0 0 40px rgb(45, 8, 8);
+}
+
+.food1{
+    animation : linear bone1-fly 3s infinite;
+    width : 120px;
+    display : inline-block;
+    position : absolute;
+    top : -40px;
+    left : -350px;
+    z-index: 30;
+}
+
+.food2{
+    animation : linear bone2-fly 3s infinite;
+    width : 120px;
+    display : inline-block;
+    position : absolute;
+    top : 430px;
+    left : 1680px;
+    z-index: 30;
+}
+
+.spoon{
+    width : 70px;
+    display : inline-block;
+    position : absolute;
+    top : 250px;
+    left : 200px;
+    transform: rotate(10deg);
+}
+
+.chopsticks{
+    width : 70px;
+    display : inline-block;
+    position : absolute;
+    top : 220px;
+    left : 750px;
+    transform: rotate(160deg);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가운데정렬_fixed</title>
+    <style>
+        body {
+            height: 2000px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: fixed;
+            margin: auto;
+            inset: 0;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+
+        .header,
+        .footer {
+            height: 20px;
+            background-color: salmon;
+        }
+
+        .main {
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header"></header>
+        <main class="main"></main>
+        <footer class="footer"></footer>
+    </div>
+</body>
+
+</html>

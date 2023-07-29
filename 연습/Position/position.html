@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .grand-parent {
+            display: flex;
+            border: 2px solid red;
+            padding: 80px;
+            height: 1000px;
+        }
+
+        .parent1 {
+            border: 2px solid blue;
+            padding: 80px;
+            flex-grow: 1;
+        }
+
+        .parent2 {
+            position: relative;
+            border: 2px solid green;
+            padding: 80px;
+            flex-grow: 1;
+        }
+
+        .parent3 {
+            border: 2px solid purple;
+            padding: 80px;
+            flex-grow: 1;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+        }
+
+        .child:nth-child(1) {
+            background-color: salmon;
+        }
+
+        .child:nth-child(2) {
+            background-color: skyblue;
+        }
+
+        .child:nth-child(3) {
+            background-color: lightgreen;
+        }
+
+        .relative {
+            position: relative;
+            right: 50px;
+            top: 50px;
+        }
+
+        .absolute {
+            position: absolute;
+            right: 50px;
+            top: 50px;
+        }
+
+        .fixed {
+            position: fixed;
+            right: 200px;
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grand-parent">
+        <div class="parent1">
+            Relative
+            <div class="child">1</div>
+            <div class="child relative">2</div>
+            <div class="child">3</div>
+        </div>
+        <div class="parent2">
+            Absolute
+            <div class="child">1</div>
+            <div class="child absolute">2</div>
+            <div class="child">3</div>
+        </div>
+        <div class="parent3">
+            Fixed
+            <div class="child">1</div>
+            <div class="child fixed">2</div>
+            <div class="child">3</div>
+        </div>
+    </div>
+</body>
+
+</html>
