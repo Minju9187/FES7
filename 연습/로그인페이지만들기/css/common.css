@@ -12,9 +12,14 @@
 }
 
 /* reset */
-body, h1,h2,h3,p{
+body,
+h1,
+h2,
+h3,
+p{
     margin : 0;
     padding : 0;
+    font : inherit;
 }
 
 body{
@@ -24,6 +29,21 @@ body{
 
 img{
     vertical-align: top;
+}
+button{
+    border : none;
+    background: none;
+}
+
+button:enabled{
+    cursor : pointer;
+}
+
+ol,
+li{
+    list-style: none;
+    padding : 0;
+    margin : 0;
 }
 
 a{
@@ -35,6 +55,18 @@ input, button{
 }
 
 /* CSS적용 */
+
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
 .max-width{
     width : 1284px;
     max-width : calc(100% - 60px);
@@ -57,9 +89,8 @@ input, button{
     width : 156px;
 }
 
-.btn-join{
+[class^='btn']{
     display : inline-flex;
-    background-image: url(../images/icon-join.svg);
     height : 40px;
     padding : 0 20px 0 46px;
     background-color: #fff;
@@ -67,6 +98,16 @@ input, button{
     background-size: 32px;
     background-position: 10px 50%;
     align-items: center;
+}
+
+.btn-login{
+    background-image: url(../images/icon-login.svg);
+}
+.btn-join{
+    background-image: url(../images/icon-join.svg);
+}
+.btn-logout{
+    background-image: url(../images/icon-logout.svg);
 }
 
 .login{
@@ -128,9 +169,51 @@ input, button{
 
     border-radius: 4px;
 }
+.form textarea{
+    display : block;
+    width : 100%;
+    height : 360px;
+    border : 1px solid #677880;
+    border-radius: 4px;
+    resize : none;
+
+    box-sizing: border-box;
+    padding : 10px;
+    font : inherit;
+}
 
 .footer{
     text-align: center;
     color : #677880;
     font-size : 12px;
+}
+
+/* index.html */
+.header .login-text{
+    display : flex;
+    align-items: center;
+    gap : 8px;
+}
+
+.header .login-text p strong {
+    font-family: 'Pretendard-Bold';
+    box-shadow: inset 0 -0.5em 0 rgba(255,78,110,0.8);
+}
+@media (min-width : 601px){
+    .header .login-text p::after{
+        content: '|';
+        color : #d8ddde;
+        margin-left : 24px;
+    }
+}
+@media ( max-width : 600px){
+    .header .login-text p{
+        position : absolute;
+        top : 140px;
+        right : 30px;
+    }
+}
+
+.btn-logout {
+    background-image: url(../images/icon-logout.svg);
 }
