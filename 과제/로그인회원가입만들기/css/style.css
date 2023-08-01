@@ -18,7 +18,15 @@ label{
     margin : 0;
     padding : 0;
 }
+
+input{
+    font : inherit;
+    border : none;
+}
+
 a{
+    color : inherit;
+    font : inherit;
     text-decoration: none;
 }
 button{
@@ -67,11 +75,19 @@ h2{
 
 .main-text{
     padding : 24px 26px 0;
+    font-family: 'SpoqaHanSansNeo-Regular';
 }
 
 form{
     display : flex;
     flex-direction: column;
+}
+
+.form-id,
+.form-pw{
+    padding-left : 16px;
+    border-radius: 5px;
+    border : 1px solid rgba(196,196,196,1);
 }
 
 #id{
@@ -101,12 +117,17 @@ form{
 .join-idpwfind{
     display : flex;
     justify-content: center;
-    margin : 20px 158px 0 158px;
+    margin : 20px auto 0;
+    color: rgba(118, 118, 118, 1);
 }
-
+.join::after{
+    content : '|';
+    padding : 0 12px;
+}
 .section2{
-    padding : 24px;
+    padding : 0 auto ;
 }
 .line{
-    margin : 24px;
+    margin : 38px 24px 29px;
+    box-sizing: border-box;
 }
