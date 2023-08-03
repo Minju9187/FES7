@@ -78,7 +78,20 @@ let a = 10; // 전역변수
 function test() {
   console.log(a);
 }
+test(); //10
+console.log(a); // 100
+
+let a = 10;
+function test() {
+  let a = 100;
+  function test2() {
+    a = 1000;
+  }
+  test2();
+  console.log(a); // 1000
+}
 test();
+console.log(a); // 10
 
 let a = 10;
 function one() {
@@ -120,3 +133,30 @@ function test() {
   return b;
 }
 test();
+
+// 지역변수는 서로 간섭하지 않습니다.
+function test1() {
+  let x = 100;
+}
+
+function test2() {
+  // 이렇게 하면 window에 등록이 되어 버립니다.
+  // let이나 const, var 키워드를 꼭 써주세요.
+  x = 100;
+}
+
+test1();
+test2();
+console.log(x);
+console.log(window.x);
+
+let battery = 100;
+function 메모장() {
+  a = 100;
+  return b;
+}
+
+function 사진() {
+  battery -= 1;
+  return b;
+}
