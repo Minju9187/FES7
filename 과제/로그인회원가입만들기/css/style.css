@@ -18,7 +18,9 @@ label{
     margin : 0;
     padding : 0;
 }
-
+img{
+    vertical-align: top;
+}
 input{
     font : inherit;
     border : none;
@@ -38,7 +40,7 @@ ol,li{
     list-style: none;
 }
 body{
-    background-color: skyblue;
+    background-color: #c4c4c4;
     font-family: 'SpoqaHanSansNeo-Regular';
 }
 .main{
@@ -48,6 +50,7 @@ body{
     background-color: white;
     border : 1px soild #C4C4C4;
     border-radius: 10px;
+    padding-bottom: 15px;
 }
 
 h2{
@@ -57,25 +60,11 @@ h2{
     border-bottom: 1px solid #C4C4C4;
 }
 
-.login-other{
-    display : flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-other a{
-    padding : 5px 0;
-    margin-bottom : 10px;
-    font-weight : 500;
-    width : 90%;
-    border-radius: 5px;
-    border : 1px solid;
-}
-
 .main-text{
     padding : 24px 26px 0;
     font-family: 'SpoqaHanSansNeo-Regular';
+    font-size: 20px;
+    font-weight: 500;
 }
 
 form{
@@ -119,15 +108,88 @@ form{
     justify-content: center;
     margin : 20px auto 0;
     color: rgba(118, 118, 118, 1);
+    font-size: 14px;
+    font-weight: 400;
 }
 .join::after{
     content : '|';
     padding : 0 12px;
 }
 .section2{
+    position : relative;
     padding : 0 auto ;
 }
 .line{
     margin : 38px 24px 29px;
     box-sizing: border-box;
+}
+.or{
+    text-align: center;
+    width : 52px;
+    height : 18px;
+
+    background-color: white;
+    display : block;
+    
+    font-size: 14px;
+    color : rgba(118, 118, 118, 1);
+    position : absolute;
+    left : 50%;
+    top : -2px;
+    transform: translate(-50%,-50%);
+}
+
+.login-other{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-other a{
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+
+    display : block;
+
+    padding : 5px 0;
+    margin-bottom : 10px;
+    font-weight : 500;
+
+    width : 472px;
+    height : 50px;
+
+    border-radius: 5px;
+
+    color :rgba(118, 118, 118, 1);
+}
+
+.google{
+    position: relative;
+    border: 1px solid rgba(118, 118, 118, 1);
+}
+
+.facebook{
+    position: relative;
+    border : 1px solid rgba(45, 156, 219, 1);
+}
+
+.naver{
+    position: relative;
+    border : 1px solid rgba(0, 191, 24, 1);
+}
+.kakao{
+    position: relative;
+    border : 1px solid rgba(242, 201, 76, 1);
+}
+
+.login-other a div{
+    position: absolute;
+
+    width : 22px;
+    height : 22px;
+    
+    top : 13px;
+    left : 12px;
 }
