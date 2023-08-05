@@ -42,6 +42,10 @@ ol,li{
 body{
     background-color: #c4c4c4;
     font-family: 'SpoqaHanSansNeo-Regular';
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 .main{
     margin : auto;
@@ -80,6 +84,7 @@ form{
 }
 
 #id{
+    border: 2px solid rgba(244, 73, 46, 1);
     box-sizing: border-box;
     margin : 24px 24px 0 24px;
     height : 50px;
@@ -90,11 +95,20 @@ form{
     margin : 10px 24px 0 24px;
     height : 50px;
 }
-
+form p{
+    color : rgba(244, 73, 46, 1);
+    font-size: 14px;
+    padding-left: 28px;
+    margin-top : 6px;
+}
 .login-con{
     margin : 16px 351px 0 28px;
 }
-
+.login-con img{
+    width : 22px;
+    height : 22px;
+    margin-right : 5px;
+}
 .login{
     margin : 20px 24px 0 24px;
     background: rgba(47, 128, 237, 1);
@@ -187,8 +201,8 @@ form{
 .login-other a div{
     position: absolute;
 
-    width : 22px;
-    height : 22px;
+    width : 28px;
+    height : 28px;
     
     top : 13px;
     left : 12px;
