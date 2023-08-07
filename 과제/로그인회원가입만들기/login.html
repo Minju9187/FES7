@@ -13,6 +13,12 @@
     <article class="main">
         <header class="header">
             <h2>로그인 또는 회원가입</h2>
+            <a href="#">
+                <div class="out">
+                    <span class="sp1"></span>
+                    <span class="sp2"></span>
+                </div>
+            </a>
         </header>
         <section class="section1">
             <p class="main-text">위니브에서 여러분의 궁금증을 해결하세요! :&#41;</p>
@@ -23,18 +29,29 @@
                 <label for="pw"></label>
                 <input class="form-pw" id="pw" type="password" placeholder="비밀번호">
                 <p>아이디 혹은 비밀번호가 일치하지 않습니다.</p>
-                <button class="login-con" type="button">
+                <div class="check-wrap">
+                    <input class="check a11y-hidden" type="checkbox" id="checked">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="10.5" stroke="#767676" />
+                        <path d="M15.5 8.5L10.5 14L7 10.5" stroke="#767676" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <label for="checked">로그인 상태 유지</label>
+                </div>
+                <!-- <button class="login-con" type="button">
                     <img src="./img/check-box.svg" alt="로그인 체크 버튼"></img>
-                    로그인 상태 유지 </button>
+                    로그인 상태 유지 </button> -->
                 <button class="login" type="button">로그인</button>
             </form>
             <div class="join-idpwfind">
-                <a href="#">
-                    <p class="join">회원가입</p>
-                </a>
-                <a href="#">
-                    <p>아이디/비밀번호 찾기</p>
-                </a>
+                <ul>
+                    <li class="join"><a href="#">회원가입</a></li>
+                    <li>
+                        <a href="#">
+                            <p>아이디/비밀번호 찾기</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="section2">

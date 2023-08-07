@@ -12,6 +12,7 @@ p,
 a,
 button,
 ol,
+ul,
 li,
 input,
 label{
@@ -39,7 +40,18 @@ button{
 ol,li{
     list-style: none;
 }
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
 body{
+    position : relative;
     background-color: #c4c4c4;
     font-family: 'SpoqaHanSansNeo-Regular';
     display : flex;
@@ -47,6 +59,7 @@ body{
     align-items: center;
     min-height: 100vh;
 }
+
 .main{
     margin : auto;
     width : 520px;
@@ -56,19 +69,43 @@ body{
     border-radius: 10px;
     padding-bottom: 15px;
 }
-
-h2{
+.header{
+    position : relative;
+}
+.header h2{
     text-align: center;
     font-size: 16px;
     padding:18px 0;
     border-bottom: 1px solid #C4C4C4;
 }
+.header .out{
+    position : absolute;
+    width : 16px;
+    height : 16px;
+    top : 30px;
+    right : 12px;
+    transform : translate(-50%,-50%);
+}
+.header span{
+    position : absolute;
+    top : 8px;
+    right : -3px;
+    display : block;
+    width : 22px;
+    height : 1px;
+    background-color: #767676;
+}
+.sp1{
+    transform: rotate(45deg);
+}
+.sp2{
+    transform : rotate(-45deg);
+}
 
 .main-text{
     padding : 24px 26px 0;
-    font-family: 'SpoqaHanSansNeo-Regular';
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 form{
@@ -103,18 +140,42 @@ form p{
 }
 .login-con{
     margin : 16px 351px 0 28px;
+    color : #767676;
+    font-size : 16px;
 }
 .login-con img{
     width : 22px;
     height : 22px;
     margin-right : 5px;
 }
+
+.check:checked+svg circle,
+.check:checked+svg path
+{
+    fill:#2F80ED;
+    stroke:white;
+}
+
+.check-wrap{
+    display : flex;
+    margin : 16px 351px 0 28px;
+    color : #767676;
+    font-size : 16px;
+}
+.check-wrap svg{
+    width : 22px;
+    height : 22px;
+    margin-right : 5px;
+}
+
 .login{
     margin : 20px 24px 0 24px;
     background: rgba(47, 128, 237, 1);
     padding : 14px 211px;
     border-radius: 5px;
     color : white;
+    font-size : 18px;
+    font-weight: 700;
 }
 
 .join-idpwfind{
@@ -125,17 +186,25 @@ form p{
     font-size: 14px;
     font-weight: 400;
 }
+.join-idpwfind ul{
+    display : flex;
+}
 .join::after{
     content : '|';
-    padding : 0 12px;
+    width : 4px; 
+    padding-left : 12px;
+    padding-right : 12px;
 }
 .section2{
     position : relative;
     padding : 0 auto ;
 }
 .line{
-    margin : 38px 24px 29px;
+    margin : 38px 24px 28px;
     box-sizing: border-box;
+    border : 0;
+    height : 1px;
+    background-color:#c4c4c4;
 }
 .or{
     text-align: center;
