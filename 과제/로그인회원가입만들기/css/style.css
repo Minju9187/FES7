@@ -36,6 +36,7 @@ button{
     background: inherit;
     border:none;
     font : inherit;
+    cursor: pointer;
 }
 ol,li{
     list-style: none;
