@@ -50,8 +50,8 @@ const person = {
   gender: "male",
 };
 
-const props = Object.keys(person);
-console.log(props);
-for (let i = 0; i < props.length; i++) {
-  console.log(`key: ${props[i]} , value : ${person[props[i]]} `);
+const keys = Object.keys(person);
+console.log(keys);
+for (let i = 0; i < keys.length; i++) {
+  console.log(`key: ${keys[i]} , value : ${person[keys[i]]} `);
 }
