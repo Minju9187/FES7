@@ -45,7 +45,7 @@ while (num < 11) {
 }
 
 const person = {
-  name: "재현",
+  name: "민주",
   age: 20,
   gender: "male",
 };
