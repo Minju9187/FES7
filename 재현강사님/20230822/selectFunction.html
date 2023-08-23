@@ -122,8 +122,8 @@
             <li><button type="button">C#</button></li>
             <li><button type="button">C/C++</button></li> -->
         </ul>
-        <!-- <input type="text">
-        <button class="putList">리스트에 넣기</button> -->
+        <input type="text">
+        <button class="putList">리스트에 넣기</button>
     </div>
 
     <script>
@@ -141,53 +141,59 @@
         //     });
         // });
 
-        //3. li를 동적으로 생성해주세요.
+        // 3. li를 동적으로 생성해주세요.
         // const list = document.querySelector('.list');
         // const arrLang = ['Python', 'Java', 'JavaScript', 'C#', 'C/C++'];
 
-        //HTML 요소를 생성하는 예전 방식
+        // // HTML 요소를 생성하는 예전 방식
         // arrLang.forEach((item) => {
         //     const li = document.createElement('li');
         //     const liBtn = document.createElement('button');
         //     liBtn.setAttribute('type', 'button');
         //     liBtn.textContent = item;
         //     li.appendChild(liBtn);
-        //     //list.appendChild(li).appendChild(liBtn)
         //     list.append(li);
+        //     //list.appendChild(li).appendChild(liBtn)
         // })
 
-        const list = document.querySelector('.list');
-        const arrLang = ['Python', 'Java', 'JavaScript', 'C#', 'C/C++'];
+        // const list = document.querySelector('.list');
+        // const arrLang = ['Python', 'Java', 'JavaScript', 'C#', 'C/C++'];
 
-        arrLang.forEach((item) => {
-            const li = document.createElement('li');
-            li.innerHTML = `<button type ='button'>${item}</button>`;
-            list.appendChild(li);
+        // arrLang.forEach((item) => {
+        //     const li = document.createElement('li');
+        //     li.innerHTML = `<button type ='button'>${item}</button>`;
+        //     list.appendChild(li);
+        // })
+        // // 4. 이벤트를 이벤트 위임을 통해서 구현
+        // list.addEventListener('click', (e) => {
+        //     if (e.target.nodeName === "BUTTON") {
+        //         btn.textContent = e.target.textContent;
+        //         btn.classList.remove('on');
+        //     }
+        // })
+
+        const inp = document.querySelector('input');
+        const makeListBtn = document.querySelector('.putList');
+        const list = document.querySelector('.list');
+
+        makeListBtn.addEventListener('click', function () {
+            const myLi = document.createElement('li');
+            const newBtn = document.createElement('button');
+            const btnTxt = document.createTextNode('');
+
+            newBtn.innerHTML = inp.value;
+            newBtn.append(btnTxt);
+
+            myLi.append(newBtn);
+            list.appendChild(myLi);
         })
-        // 4. 이벤트를 이벤트 위임을 통해서 구현
+        //4. 이벤트를 이벤트 위임을 통해서 구현해주세요.
         list.addEventListener('click', (e) => {
             if (e.target.nodeName === "BUTTON") {
                 btn.textContent = e.target.textContent;
                 btn.classList.remove('on');
             }
         })
-
-        // const inp = document.querySelector('input');
-        // const makeListBtn = document.querySelector('.putList');
-        // const list = document.querySelector('.list');
-
-        // makeListBtn.addEventListener('click', function () {
-        //     const myLi = document.createElement('li');
-        //     const newBtn = document.createElement('button');
-        //     const btnTxt = document.createTextNode('');
-
-        //     newBtn.innerHTML = inp.value;
-        //     newBtn.append(btnTxt);
-
-        //     myLi.append(newBtn);
-        //     list.appendChild(myLi);
-        // })
-        //4. 이벤트를 이벤트 위임을 통해서 구현해주세요.
     </script>
 </body>
 
