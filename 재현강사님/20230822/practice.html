@@ -9,26 +9,38 @@
 </head>
 
 <body>
-    <!-- 앵커의 기본 동작을 중지 -->
-    <a href="https://www.naver.com" class="link">네이버 링크입니다만..</a>
-    <script>
-        const link = document.querySelector('.link');
-        link.addEventListener('click', (event) => {
-            console.log('clicked');
-            event.preventDefault();
-        })
-    </script>
 
-    <!-- submit 의 기본 동작을 중지 -->
-    <form action="">
-        <button type="submit" class="submit">제출</button>
-    </form>
     <script>
-        const submit = document.querySelector('.submit');
-        submit.addEventListener('click', (event) => {
-            console.log('clicked');
-            event.preventDefault();
-        })
+        const me = {
+            name: '한재현',
+            address: '제주도 제주시 인다 1길',
+            phoneNum: '010-8000-0000',
+            canWalk: function () {
+                console.log('재현이가 걷는다.');
+            },
+            teaching: function (student) {
+                student.levelUp();
+            }
+        }
+        const you = {
+            name: '강민주',
+            address: '마천',
+            phoneNum: '010-9000-0000',
+            canWalk: function () {
+                console.log('민주가 걷는다.');
+            },
+            teaching: function (student) {
+                student.levelUp();
+            }
+        }
+        const lion = {
+            level: 1,
+            levelUp: function () {
+                this.level++;
+            }
+        }
+        me.teaching(lion);
+        you.teaching(lion);
     </script>
 </body>
 
