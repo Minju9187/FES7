@@ -3,17 +3,19 @@ body{
     height: 4825px;
     background: linear-gradient(to bottom, gold, royalblue);
 }
+
 .wrap{
     width: 100%;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
 }
+
 path{
     fill:none;
     stroke: white;
     stroke-width:5px;
-    stroke-linecap:round ;
+    stroke-linecap : round;
     stroke-linejoin: round;
 }
 
@@ -42,9 +44,11 @@ path{
 
     transition: color 0.5s, background-color 0.3s;
 }
+
 .btn-open:enabled{
     cursor: pointer;
 }
+
 .btn-open:enabled:hover{
     color:royalblue;
     background-color: white;
@@ -63,6 +67,7 @@ path{
     color:white;
     text-align: center;
 }
+
 .modal ul{
     list-style: none;
     padding:0;
@@ -73,6 +78,7 @@ path{
     border-top:1px solid rgba(255,255,255, 0.3);
     padding-top:10px;
 }
+
 .modal ul a{
     display: inline-block;
     background-color: white;
