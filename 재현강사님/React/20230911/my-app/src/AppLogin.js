@@ -10,5 +10,13 @@ export default function AppLogin() {
   //로그인 상태를 판단하는 state
   const [login, setLogin] = useState(false);
 
-  return login ? <Homepage /> : <Login infoUser={user} setLogin={setLogin} />;
+  return (
+    <>
+      {login ? (
+        <Homepage setLogin={setLogin} />
+      ) : (
+        <Login infoUser={user} setLogin={setLogin} />
+      )}
+    </>
+  );
 }
