@@ -5,8 +5,9 @@ import App from "./App";
 import App2 from "./App2";
 import App3 from "./App3";
 import App4 from "./App4";
-import App6 from "./App6";
+import App5 from "./App5";
+import Practice from "./Practice";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(<App4 />);
+root.render(<Practice />);

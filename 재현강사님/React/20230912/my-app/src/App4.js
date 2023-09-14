@@ -11,7 +11,7 @@ function MainPet() {
 
   return (
     <>
-      <AddPetForm setPets={setPets} />
+      <AddPetForm pets={pets} setPets={setPets} />
       <ul>
         {pets.map((item) => {
           return <PetItem key={item.id} data={item} />;
@@ -21,17 +21,17 @@ function MainPet() {
   );
 }
 
-function AddPetForm({ setPets }) {
+function AddPetForm({ pets, setPets }) {
   const [name, setName] = useState("");
   const [species, setSpecies] = useState("");
   const [age, setAge] = useState(0);
 
   function handleSubmit(event) {
     event.preventDefault();
+    console.log();
+    // setPets([...pets, { name, species, age, id: Date.now() }]);
     setPets((prev) => {
-      prev.push({ name, species, age, id: Date.now() });
-      console.log(prev);
-      return prev;
+      return [...prev, { name, species, age, id: Date.now() }];
     });
     setName("");
     setSpecies("");

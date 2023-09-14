@@ -18,7 +18,8 @@ const NavBar = () => {
   const [listName, setListName] = useState("detail");
 
   function checkId(event) {
-    setListName(event.target.id);
+    setListName(event.target.className);
+    console.log(event);
   }
 
   return (
@@ -26,7 +27,7 @@ const NavBar = () => {
       <nav>
         <ul>
           <li
-            id="detail"
+            className="detail"
             style={
               listName === "detail" ? { color: "red" } : { color: "black" }
             }
@@ -35,14 +36,14 @@ const NavBar = () => {
             상세정보
           </li>
           <li
-            id="qa"
+            className="qa"
             style={listName === "qa" ? { color: "red" } : { color: "black" }}
             onClick={checkId}
           >
             Q&A
           </li>
           <li
-            id="review"
+            className="review"
             style={
               listName === "review" ? { color: "red" } : { color: "black" }
             }
@@ -58,5 +59,11 @@ const NavBar = () => {
 };
 
 export default function App6() {
-  return <NavBar />;
+  return (
+    // && : 첫번째 falsy 값을 반환하거나 혹은 마지막 truthy 값을 반환합니다.
+    <NavBar />
+
+    // || : 첫번째 truthy 값을 반환하거나 혹은 마지막 falsy 값을 반환합니다.
+    // false || 1 || false || <NavBar />
+  );
 }
