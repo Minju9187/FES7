@@ -1,0 +1,61 @@
+.main-p1{
+    margin-top : 102px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4;
+    color : white;
+    font-size: 24px;
+}
+
+.main-input{
+    width : 228px;
+    height : 57px;
+    padding : 17px 41px 16px 39px;
+    border-radius : 7px; 
+    text-align: center;
+}
+
+.container-btnClick{
+    margin-top : 115px;
+    margin-bottom : 25px;
+    display: flex;
+}
+
+.click-img{
+    position: relative;
+    top : 14px;
+    left : 7px;
+}
+
+.btn{
+    padding : 15px 49px;
+    background-color: rgba(252, 238, 33, 1);
+    border-radius: 56px;
+    color : rgba(91, 35, 134, 1);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    font-weight: 700;
+    /* line-height: 1; */
+}
+
+.btn-flex{
+    display: flex;
+    gap : 18px;
+    margin-top : 127px;
+}
+
+.main-p2{
+    margin-top : 102px;
+    text-align: center;
+    color : white;
+    font-size: 24px;
+}
+
+.main-span{
+    vertical-align: middle;
+    font-size : 72px;
+    font-weight: 700;
+}
+
+.btn-share{
+    background-color: white;
+}

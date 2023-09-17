@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'tvnEnjoystories';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+.header-img{
+    margin-top : 194px;
+    position : relative;
+}
+
+.header-backImg{
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-p1{
+    margin-top : 125px;
+    font-size : 36px;
+    color : rgba(245, 223, 77, 1);
+    font-family : "tvnEnjoystories";
+}
+
+.header-p2{
+    margin-top : 125px;
+    font-size : 18px;
+    line-height: 2;
+    color : white;
+    text-align: center;
+    font : ;
+}
+
+.header-span{
+    font-size : 24px;
+    font-weight: 700;
+}

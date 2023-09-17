@@ -1,0 +1,9 @@
+body{
+    background: rgba(91, 35, 134, 1);
+}
+.article{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
