@@ -44,13 +44,15 @@ class TimerBtn {
       let secValue = parseInt(this.sec.textContent);
       let secText = "";
       if (secValue < 9) {
+        secValue++;
         secText = "0" + secValue;
-      } else if (secValue >= 9 && secValue <= 99) {
+      } else if (secValue >= 9 && secValue < 99) {
+        secValue++;
         secText = secValue;
       } else {
         secValue = 0;
       }
-      secValue++;
+      console.log(secText);
       this.sec.innerHTML = `${secText}`;
     });
   }
